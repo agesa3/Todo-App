@@ -29,12 +29,16 @@ fun TodoItem(
             Modifier.weight(1f),
             verticalArrangement = Arrangement.Center
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(5.dp)
+            ) {
                 Text(
                     text = todo.title,
                     fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold
-                )
+                    fontWeight = FontWeight.Bold,
+
+                    )
 
                 Spacer(modifier = Modifier.width(8.dp))
                 IconButton(onClick = {
