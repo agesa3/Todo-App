@@ -11,9 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.agesadev.todoapp.data.Todo
+
 
 @Composable
 fun TodoItem(
@@ -22,8 +24,9 @@ fun TodoItem(
     modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = Modifier,
+        modifier = Modifier.padding(start = 16.dp, end = 16.dp),
         verticalAlignment = Alignment.CenterVertically
+
     ) {
         Column(
             Modifier.weight(1f),

@@ -1,6 +1,7 @@
 package com.agesadev.todoapp.ui.todo_list
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -13,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.agesadev.todoapp.util.UiEvent
@@ -21,10 +23,12 @@ import kotlinx.coroutines.flow.collect
 
 @Composable
 fun TodoListScreen(
+
     onNavigate: (UiEvent.Navigate) -> Unit,
     viewModel: TodoListViewModel = hiltViewModel()
 
 ) {
+//    TopAppBar(title = { Text(text = "Adopt Me") }, backgroundColor = Color.Red)
     val todos = viewModel.todos.collectAsState(emptyList())
     val scaffoldState = rememberScaffoldState()
     LaunchedEffect(key1 = true) {
